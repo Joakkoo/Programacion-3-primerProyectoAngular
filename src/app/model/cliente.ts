@@ -1,4 +1,5 @@
 export class Cliente {
+    id?: number;
     nombre : string;
     apellido?: string
     edad?: number
@@ -7,13 +8,6 @@ export class Cliente {
     constructor() {
       this.nombre = "-";
     }
-    fullName(): string {
-        return this.nombre+", "+ this.apellido;
-      }
-    
-      edadToString(): string {
-        return this.edad + " Años"
-      }
   }
 
   

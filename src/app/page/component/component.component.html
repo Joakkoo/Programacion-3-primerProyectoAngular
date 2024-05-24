@@ -1,2 +1,11 @@
 <p>component works!</p>
-{{clientesJson}}
+{{clientes}}
+@for (cliente of clientes; track cliente.id) {
+    @if (cliente.islive) {
+        <p> {{$index}} - {{cliente.id}} - {{cliente.nombre}} - {{cliente.apellido}} - {{cliente.edad}} - {{cliente.cuit}} - {{cliente.islive}}</p>
+    } @else {
+        {{cliente.nombre}} {{cliente.apellido}}  esta muertaso! <br>
+    }
+}@empty {
+    <p>No hay clientes</p>
+}
